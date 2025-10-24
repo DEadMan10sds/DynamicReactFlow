@@ -1,0 +1,29 @@
+{
+  "A5001": {
+    "parts": [
+      {
+        "name": "Resorte",
+        "quantity": 3
+      },
+      {
+        "name": "Placa",
+        "quantity": 1
+      },
+      {
+        "name": "Prensa",
+        "quantity": 5
+      }
+    ]
+  },
+  "B5002": {
+    "parts": [
+      {
+        "name": "Resorte",
+        "quantity": 3
+      }
+    ]
+  },
+  "C5003": {
+    "parts": []
+  }
+}
