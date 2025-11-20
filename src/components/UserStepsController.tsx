@@ -5,6 +5,7 @@ import {
   resetCurrentStep,
 } from "../reducer/Operations/Operation";
 import type { RootState } from "../store/Store";
+import { Button } from "./Button";
 
 export const UserStepsController = ({
   canGoNext = true,
@@ -24,24 +25,17 @@ export const UserStepsController = ({
   return (
     <div className="grid grid-cols-2 gap-4">
       {canGoPrev && (
-        <button
-          className="border-slate-300 border bg-slate-600 "
-          onClick={() => dispatch(prevStep())}
-        >
-          Anterior
-        </button>
+        <Button text="Anterior" onClick={() => dispatch(prevStep())} />
       )}
       {canGoNext && (
-        <button
-          className="p-3 my-3 rounded-md border border-amber-800 bg-stone-800"
+        <Button
+          text="Siguiente"
           onClick={() =>
             currentStep < steps - 1
               ? dispatch(nextStep())
               : dispatch(resetCurrentStep())
           }
-        >
-          Siguiente
-        </button>
+        />
       )}
     </div>
   );

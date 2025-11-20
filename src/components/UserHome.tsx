@@ -17,7 +17,7 @@ export const UserHome = () => {
         <p className="text-end">Paso: {currStep}</p>
       </div>
 
-      <div className="my-2 flex- items-center">
+      <div className="my-2 flex-col p-6 items-center internal-neo [--shadow-color:#110f0e] [--box-shadow:#272320]">
         {CurrentComponent && <CurrentComponent />}
       </div>
     </div>

@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  b//ackground-color: #242424;
+  //background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,8 +15,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.internal-neo {
+  border-radius: 3px;
+  box-shadow: inset 9px 9px 18px var(--shadow-color),
+    inset -9px -9px 18px var(--box-shadow);
+}
+
+.outer-neo {
+  border-radius: 3px;
+  box-shadow: 9px 9px 18px #161412, -9px -9px 18px #221e1c;
+}
+
 button {
-  border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;

@@ -9,7 +9,7 @@ function Home() {
   const flow = createFlow(role);
 
   return (
-    <div className="bg-stone-950">
+    <div className="bg-stone-950 h-screen">
       <Navbar>{flow.render()}</Navbar>
     </div>
   );
