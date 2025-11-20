@@ -29,8 +29,8 @@ export const Button: React.FC<ButtonProps> = ({
       className="
         cursor-pointer mt-4 relative p-4 outer-neo
         before:absolute before:inset-x-0 before:bottom-0 before:h-1
-        before:bg-gradient-to-r before:from-transparent before:to-transparent
-        before:via-[var(--border-color)]
+        before:bg-linear-to-r before:from-transparent before:to-transparent
+        before:via-(--border-color)
         before:opacity-30 hover:before:opacity-100
         before:transition-opacity before:duration-150
       "
@@ -39,59 +39,3 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-/**
- * Similar function but has tons of logic to make color dynamic -> Tailwind 4 doesn't support dynamic classes for pseudo elements  
- import React, { useState } from "react";
-
-type ButtonProps = {
-  text: string;
-  color?: string;
-  hoverColor?: string;
-  pulse?: boolean;
-  showBorder?: boolean;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export const Button: React.FC<ButtonProps> = ({
-  text,
-  color = "#FF8800",
-  hoverColor = "#FFA500",
-  pulse = false,
-  showBorder = true,
-  ...props
-}) => {
-  const [hovered, setHovered] = useState(false);
-  const baseGradient = `linear-gradient(to right, transparent, ${color}, transparent)`;
-  const hoverGradient = `linear-gradient(to right, transparent, ${hoverColor}, transparent)`;
-
-  return (
-    <button
-      {...props}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={`relative p-4 mt-3 cursor-pointer outer-neo ${
-        pulse ? "animate-pulse" : ""
-      }`}
-      style={{ position: "relative" }}
-    >
-      {text}
-      {showBorder && (
-        <span
-          style={{
-            position: "absolute",
-            left: 0,
-            right: 0,
-            bottom: 0,
-            height: "4px",
-            borderRadius: "2px",
-            background: hovered ? hoverGradient : baseGradient,
-            opacity: hovered ? 1 : 0.3,
-            transition: "opacity 0.5s ease, background 0.5s ease",
-          }}
-        />
-      )}
-    </button>
-  );
-};
-
- */
