@@ -9,7 +9,8 @@ function Home() {
   const flow = createFlow(role);
 
   return (
-    <div className="bg-stone-950 h-screen">
+    //Main classes for all site
+    <div className="bg-stone-950 h-screen font-semibold text-md">
       <Navbar>{flow.render()}</Navbar>
     </div>
   );
