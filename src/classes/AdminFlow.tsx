@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 export default class AdminFlow implements FlowBase {
   asideLinks(): JSX.Element {
     return (
-      <>
+      <div className="flex flex-col gap-3">
+        <Link to="/users">Usuarios</Link>
         <Link to="/settings">Configuración</Link>
-      </>
+      </div>
     );
   }
 

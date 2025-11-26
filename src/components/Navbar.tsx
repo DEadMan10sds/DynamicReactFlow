@@ -7,14 +7,12 @@ import { logout } from "../reducer/Auth/Auth";
 export const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { name, currentStep } = useSelector(
-    (state: RootState) => state.operation
-  );
+  const { name } = useSelector((state: RootState) => state.operation);
 
   return (
     <div className="flex justify-between py-2 px-8 mb-4 border-b border-stone-700">
       <h1 className="text-4xl font-bold my-5">
-        Traceability - {name ? name : "Sin Operación"} - {currentStep}
+        {name ? name : "Sin Operación"}
       </h1>
       <button
         className="cursor-pointer"

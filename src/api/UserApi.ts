@@ -17,7 +17,14 @@ export const UserApi = createApi({
     getUser: build.query<UserState, unknown>({
       query: (id: string) => `/users/${id}`,
     }),
+    editUser: build.mutation<unknown, { id: number } & Partial<UserState>>({
+      query: ({ id, ...body }) => ({
+        method: "PATCH",
+        url: `/users/${id}`,
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useGetUserQuery } = UserApi;
+export const { useGetUserQuery, useEditUserMutation } = UserApi;
