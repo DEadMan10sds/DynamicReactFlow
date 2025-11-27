@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { Link } from "react-router-dom";
 
-export type AssideLinkProperties = {
+export type AsideLinkProperties = {
   text: string;
   icon?: JSX.Element;
   color?: string;
@@ -13,7 +13,7 @@ export const AsideLink = ({
   icon,
   color = "amber-800",
   path,
-}: AssideLinkProperties) => {
+}: AsideLinkProperties) => {
   console.log(color);
   return (
     <Link

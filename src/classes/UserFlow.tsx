@@ -3,12 +3,12 @@ import type FlowBase from "../interfaces/FlowBase";
 import { UserHome } from "../components/UserHome";
 import {
   AsideLink,
-  type AssideLinkProperties,
+  type AsideLinkProperties,
 } from "../components/general/AsideLink";
 import { PiHouse } from "react-icons/pi";
 
 export default class UserFlow implements FlowBase {
-  private links: AssideLinkProperties[] = [
+  private links: AsideLinkProperties[] = [
     { text: "Inicio", path: "/", icon: <PiHouse /> },
   ];
 

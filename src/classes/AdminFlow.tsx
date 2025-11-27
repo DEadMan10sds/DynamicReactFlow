@@ -3,12 +3,12 @@ import type FlowBase from "../interfaces/FlowBase";
 import { AdminSettings } from "../pages/AdminSettings";
 import {
   AsideLink,
-  type AssideLinkProperties,
+  type AsideLinkProperties,
 } from "../components/general/AsideLink";
 import { PiGear, PiUser } from "react-icons/pi";
 
 export default class AdminFlow implements FlowBase {
-  private links: AssideLinkProperties[] = [
+  private links: AsideLinkProperties[] = [
     { text: "Usuarios", path: "/users", icon: <PiUser /> },
     { text: "Configuración", path: "/settings", icon: <PiGear /> },
   ];
