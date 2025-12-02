@@ -1,9 +1,10 @@
 services:
-  dynamic-react:
-    container_name: dynamicReact
+  frontend:
+    image: production_line:front
+    container_name: production_line
     build: ./
     ports:
-      - "5173:5173"
+      - "${PORT}:5173"
     volumes:
       - .:/app
       - /app/node_modules
